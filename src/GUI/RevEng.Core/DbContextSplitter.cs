@@ -14,10 +14,11 @@ namespace ReverseEngineer20.ReverseEngineer
         {
             var dbContextFilePath = Path.GetFullPath(dbContextPath);
 
-            var configurationsDirectoryPath = Path.GetDirectoryName(dbContextFilePath);
+            var configurationsDirectoryPath = Path.Combine(Path.GetDirectoryName(dbContextFilePath), "Configurations");
+            
+            Directory.CreateDirectory(configurationsDirectoryPath);
 
             var source = File.ReadAllText(dbContextFilePath, Encoding.UTF8);
-
 
             var contextNamespace = Regex.Match(source, @"(?<=(?:^|\s|;)namespace\s+).*?(?=(?:\s|\{))", RegexOptions.Multiline | RegexOptions.Singleline).Value;
 
