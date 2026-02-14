@@ -17,7 +17,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="[3.1.0, 5.0.0)" />
-    <PackageReference Include="Microsoft.SqlServer.DacFx" Version="150.4826.1" />
+    <PackageReference Include="Microsoft.SqlServer.DacFx" Version="170.3.93" />
   </ItemGroup>
 
   <ItemGroup>
